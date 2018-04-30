@@ -7,5 +7,11 @@ public class ControlFlowExercises {
         System.out.println("i is " + i);
         i++;
     }
+
+    int x = 0;
+    do {
+        System.out.println(x);
+        x += 2;
+    }while (x<=100);
     }
 }
