@@ -18,16 +18,16 @@ public class ControlFlowExercises {
             System.out.println(x);
         }
 
-        //Print (String.valueOf(i)) at the end so if/elseif run first
+        //Print sout(i) at the end so if/elseif run first
         for (int i = 1; i <= 100; i++) {
-            if (i % 15 == 0) {
+            if (i % 3 == 0 && i % 5 == 0) {
                 System.out.println("fizzbuzz");
             } else if (i % 3 == 0) {
                 System.out.println("fizz");
             } else if (i % 5 == 0) {
                 System.out.println("buzz");
             } else {
-                System.out.println(String.valueOf(i));
+                System.out.println(i);
             }
         }
 
@@ -47,22 +47,20 @@ public class ControlFlowExercises {
         String gradeString = sc.next();
         int grade = Integer.parseInt(gradeString);
             if (grade > 88){
-                System.out.println("A");
+                System.out.println("Your grade is: A");
             } else if(grade <= 87 && grade >= 80){
-                System.out.println("B");
+                System.out.println("Your grade is: B");
             } else if(grade <=79 && grade >= 67){
-                System.out.println("C");
+                System.out.println("Your grade is: C");
             } else if(grade <=66 && grade >= 60){
-                System.out.println("D");
+                System.out.println("Your grade is: D");
             } else if(grade <=59 && grade >= 0){
-                System.out.println("F");
+                System.out.println("Your grade is: F");
             }
-
-
-
-
-
+            System.out.println("Would you like to continue?");
+            sc.next();
 
     }
 }
+
 
