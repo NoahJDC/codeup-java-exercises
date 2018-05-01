@@ -43,6 +43,23 @@ public class ControlFlowExercises {
             System.out.println(i + "      " + "| " + i*i  + "       " + "| " + cubed);
         }
 
+        System.out.println("Input number between 0 - 100");
+        String gradeString = sc.next();
+        int grade = Integer.parseInt(gradeString);
+            if (grade > 88){
+                System.out.println("A");
+            } else if(grade <= 87 && grade >= 80){
+                System.out.println("B");
+            } else if(grade <=79 && grade >= 67){
+                System.out.println("C");
+            } else if(grade <=66 && grade >= 60){
+                System.out.println("D");
+            } else if(grade <=59 && grade >= 0){
+                System.out.println("F");
+            }
+
+
+
 
 
 
