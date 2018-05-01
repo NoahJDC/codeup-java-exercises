@@ -31,35 +31,39 @@ public class ControlFlowExercises {
             }
         }
 
-        System.out.println("what number would you like to go up to?");
+        System.out.print("what number would you like to go up to?");
         String integerString = sc.next();
         int integer = Integer.parseInt(integerString);
         System.out.println("Here is your table!");
         System.out.println("number | Squared | Cubed");
         System.out.println("------ | ------- | -----");
         for(int i = 1; i<=50; i++){
+            int squared = i*i;
             int cubed = i * i * i;
             if(i <= integer)
-            System.out.println(i + "      " + "| " + i*i  + "       " + "| " + cubed);
+            System.out.println(i + "      " + "| " + squared  + "       " + "| " + cubed);
         }
 
+
+        String option;
+    do {
         System.out.println("Input number between 0 - 100");
         String gradeString = sc.next();
         int grade = Integer.parseInt(gradeString);
-            if (grade > 88){
-                System.out.println("Your grade is: A");
-            } else if(grade <= 87 && grade >= 80){
-                System.out.println("Your grade is: B");
-            } else if(grade <=79 && grade >= 67){
-                System.out.println("Your grade is: C");
-            } else if(grade <=66 && grade >= 60){
-                System.out.println("Your grade is: D");
-            } else if(grade <=59 && grade >= 0){
-                System.out.println("Your grade is: F");
-            }
-            System.out.println("Would you like to continue?");
-            sc.next();
-
+        if (grade > 88) {
+            System.out.println("Your grade is: A");
+        } else if (grade <= 87 && grade >= 80) {
+            System.out.println("Your grade is: B");
+        } else if (grade <= 79 && grade >= 67) {
+            System.out.println("Your grade is: C");
+        } else if (grade <= 66 && grade >= 60) {
+            System.out.println("Your grade is: D");
+        } else if (grade <= 59 && grade >= 0) {
+            System.out.println("Your grade is: F");
+        }
+        System.out.println("Would you like to continue?");
+        option = sc.next();
+    } while(option.equalsIgnoreCase("y") || option.equalsIgnoreCase("yes"));
     }
 }
 
