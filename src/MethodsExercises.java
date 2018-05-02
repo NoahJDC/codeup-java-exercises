@@ -15,6 +15,12 @@ public class MethodsExercises {
                 System.out.println("Factorial of " + response + " is " + factorial(response));
             }
         } while (proceed("Would you like another factorial?"));
+        do {
+            System.out.println(dice());
+            if(proceed("Would you like to roll?")){
+
+            }
+        } while(proceed("Want another roll?"));
     }
     public static int addition(int number, int add){
         return number + add;
@@ -67,5 +73,18 @@ public class MethodsExercises {
             fact *= i;
         }
         return fact;
+    }
+    public static int dice(){
+        Scanner input;
+        input = new Scanner(System.in);
+        System.out.println("How many sides in the dice?");
+        String sidesString = input.next();
+        int sides = Integer.parseInt(sidesString);
+        int roll = (int) (Math.random() * sides);
+        System.out.print("Your roll is: ");
+        return roll;
+
+
+
     }
 }
