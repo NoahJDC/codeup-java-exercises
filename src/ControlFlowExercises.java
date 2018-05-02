@@ -47,7 +47,7 @@ public class ControlFlowExercises {
 
         String option;
     do {
-        System.out.println("Input number between 0 - 100");
+        System.out.print("Input number between 0 - 100");
         String gradeString = sc.next();
         int grade = Integer.parseInt(gradeString);
         if (grade > 88) {
