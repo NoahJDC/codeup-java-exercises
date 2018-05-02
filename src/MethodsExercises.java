@@ -13,7 +13,13 @@ public class MethodsExercises {
         return number - reduce;
     }
     public static int multiplication(int number, int times){
-        return number * times;
+        if (times == 0){
+            return 0;
+        } if (times == 1){
+            return number;
+        }
+        return number + multiplication(number, times-1);
+
     }
     public static int division(int number, int divide){
         return number / divide;
