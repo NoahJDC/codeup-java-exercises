@@ -44,6 +44,7 @@ public class MethodsExercises {
                 return getInteger(min, max);
             }
                 System.out.println("Valid Number");
-                return getInteger(min, max);
+                return response;
     }
+
 }
