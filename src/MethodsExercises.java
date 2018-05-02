@@ -16,12 +16,15 @@ public class MethodsExercises {
             }
         } while (proceed("Would you like another factorial?"));
         do {
-            System.out.println(dice());
+            int roll = dice();
             if(proceed("Would you like to roll?")){
-
+                System.out.println("Your roll is : " + roll);
             }
         } while(proceed("Want another roll?"));
+
+        System.out.println(guess(30));
     }
+
     public static int addition(int number, int add){
         return number + add;
     }
@@ -81,10 +84,25 @@ public class MethodsExercises {
         String sidesString = input.next();
         int sides = Integer.parseInt(sidesString);
         int roll = (int) (Math.random() * sides);
-        System.out.print("Your roll is: ");
         return roll;
 
-
-
+    }
+    public static int guess(int luckyNumber){
+        Scanner input;
+        input = new Scanner(System.in);
+        System.out.println("Guess a number between 1 and 100");
+        String numberString = input.next();
+        int number = Integer.parseInt(numberString);
+        if (number<1 || number>100){
+            System.out.println("Number not between 1 and 100");
+            return guess(luckyNumber);
+        }if(number == luckyNumber){
+            System.out.println("Good Guess!");
+        } if(number>luckyNumber){
+            System.out.println("LOWER");
+        } if(number<luckyNumber){
+            System.out.println("HIGHER");
+        }
+        return guess(luckyNumber);
     }
 }
