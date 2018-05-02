@@ -9,7 +9,12 @@ public class MethodsExercises {
         System.out.println(multiplication(10, 0));
         System.out.println(division(10, 9));
         System.out.println(modulus(4, 15));
-        System.out.println(getInteger(1, 10));
+        do {
+            int response = getInteger(1, 10);
+            if (proceed("Would you like to display the factorial of the number? ")) {
+                System.out.println("Factorial of " + response + " is " + factorial(response));
+            }
+        } while (proceed("Would you like another factorial?"));
     }
     public static int addition(int number, int add){
         return number + add;
@@ -34,17 +39,33 @@ public class MethodsExercises {
     }
 
     public static int getInteger(int min, int max){
-            Scanner input;
-            input = new Scanner(System.in);
-            System.out.println("Enter a number between min and max: ");
-            String responseString = input.next();
-            int response = Integer.parseInt(responseString);
-            if(response<min || response>max){
-                System.out.println("Invalid Number.");
-                return getInteger(min, max);
+        Scanner input;
+        input = new Scanner(System.in);
+        System.out.println("Enter a number between min and max: ");
+        String responseString = input.next();
+        int response = Integer.parseInt(responseString);
+        if(response<min || response>max){
+            System.out.println("Invalid Number.");
+            return getInteger(min, max);
             }
-                System.out.println("Valid Number");
-                return response;
-    }
+            return response;
 
+    }
+    public static boolean proceed(String message){
+        Scanner input;
+        input = new Scanner(System.in);
+        System.out.println(message);
+        String option = input.next();
+        if(option.equalsIgnoreCase("y") || option.equalsIgnoreCase("yes")){
+            return true;
+        }
+        return false;
+    }
+    public static int factorial(int response){
+        int fact = 1;
+        for (int i = 1; i<=response; i++){
+            fact *= i;
+        }
+        return fact;
+    }
 }
