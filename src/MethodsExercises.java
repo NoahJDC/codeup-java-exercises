@@ -2,8 +2,6 @@ import java.util.Scanner;
 
 public class MethodsExercises {
     public static void main(String[] args) {
-
-
         System.out.println(addition(2, 4));
         System.out.println(subtraction(5, 6));
         System.out.println(multiplication(10, 0));
@@ -15,11 +13,12 @@ public class MethodsExercises {
                 System.out.println("Factorial of " + response + " is " + factorial(response));
             }
         } while (proceed("Would you like another factorial?"));
+        int sides = sidesOfDice();
         do {
-            int roll = dice();
-            if(proceed("Would you like to roll?")){
-                System.out.println("Your roll is : " + roll);
-            }
+            wantToRoll();
+            int roll = dice(sides);
+            int roll2 = dice(sides);
+            System.out.println("Your first roll is : " + roll + " and second roll is: "+ roll2);
         } while(proceed("Want another roll?"));
 
         System.out.println(guess(30));
@@ -40,7 +39,7 @@ public class MethodsExercises {
         return number + multiplication(number, times-1);
 
     }
-    public static int division(int number, int divide){
+    public static double division(int number, int divide){
         return number / divide;
     }
     public static int modulus(int number, int remainder){
@@ -77,16 +76,22 @@ public class MethodsExercises {
         }
         return fact;
     }
-    public static int dice(){
-        Scanner input;
-        input = new Scanner(System.in);
+    public static int sidesOfDice(){
+        Scanner input = new Scanner(System.in);
         System.out.println("How many sides in the dice?");
-        String sidesString = input.next();
-        int sides = Integer.parseInt(sidesString);
-        int roll = (int) (Math.random() * sides);
-        return roll;
-
+        return input.nextInt();
     }
+
+    public static int dice(int sides){
+        return (int) (Math.random() * sides) +1;
+    }
+
+    public static void wantToRoll(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter any key to roll");
+        input.nextLine();
+    }
+
     public static int guess(int luckyNumber){
         Scanner input;
         input = new Scanner(System.in);
