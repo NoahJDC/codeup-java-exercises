@@ -21,7 +21,9 @@ public class MethodsExercises {
             System.out.println("Your first roll is : " + roll + " and second roll is: "+ roll2);
         } while(proceed("Want another roll?"));
 
-        System.out.println(guess(30));
+        int luckyNumber = gamePickNumber();
+        System.out.println(guess(luckyNumber));
+
     }
 
     public static int addition(int number, int add){
@@ -109,5 +111,8 @@ public class MethodsExercises {
             System.out.println("HIGHER");
         }
         return guess(luckyNumber);
+    }
+    public static int gamePickNumber(){
+        return (int) (Math.random() * 100) + 1;
     }
 }
