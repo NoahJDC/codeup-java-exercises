@@ -11,5 +11,6 @@ public class CircleApp {
             System.out.println(circle.getCircumference());
         } while(input.yesNo());
 
+        System.out.println("You have made a total of " + Circle.getNumberOfCircles() + " circles.");
     }
 }
