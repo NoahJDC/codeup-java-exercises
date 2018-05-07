@@ -10,7 +10,7 @@ public class Input {
 
     public String getString(){
         System.out.println("Type something down");
-        return scanner.next();
+        return scanner.nextLine();
     }
     public boolean yesNo(){
         System.out.println("Would you like to continue?");
