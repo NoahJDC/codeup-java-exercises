@@ -9,7 +9,6 @@ public class Input {
     }
 
     public String getString(){
-        System.out.println("Type something down");
         return scanner.nextLine();
     }
     public boolean yesNo(){
