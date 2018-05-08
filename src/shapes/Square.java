@@ -1,4 +1,7 @@
 package shapes;
 
-public class Square {
+public class Square extends Rectangle {
+    public Square(int a, int b) {
+        super(a, b);
+    }
 }
