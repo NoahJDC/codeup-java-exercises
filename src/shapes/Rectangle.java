@@ -1,18 +1,22 @@
 package shapes;
 
 public class Rectangle {
-    protected static double length;
-    protected static double width;
+    protected double length;
+    protected double width;
+
+    public Rectangle(){}
 
     public Rectangle(double length, double width){
         this.length = length;
         this.width = width;
     }
 
-    public static int getArea(){
-        double area = Math.PI * (length * width);
+    public double getArea(){
+        double area = (length * width);
+        return area;
     }
-    public static int getPerimeter(){
-        double perimeter = Math.PI * (2*length + 2*width);
+    public double getPerimeter(){
+        double perimeter = (2*length + 2*width);
+        return perimeter;
     }
 }
