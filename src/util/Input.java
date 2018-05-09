@@ -12,7 +12,6 @@ public class Input {
         return scanner.nextLine();
     }
     public boolean yesNo(){
-        System.out.println("Would you like to continue?");
         String option = scanner.next();
         if(option.equalsIgnoreCase("yes") || option.equalsIgnoreCase("y")){
             return true;
