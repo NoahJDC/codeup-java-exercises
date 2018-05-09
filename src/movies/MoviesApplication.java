@@ -11,7 +11,7 @@ public class MoviesApplication {
             System.out.println("2 - view all movies in the animated catagory");
             System.out.println("3 - view all movies in the drama catagory");
             System.out.println("4 - view all movies in the horror catagory");
-            System.out.println("5 - view all moies in the scifi catagory");
+            System.out.println("5 - view all movies in the scifi catagory");
             int choice = getChoice();
             handleChoice(choice);
         }while(true);
