@@ -1,15 +1,14 @@
 package cardgames;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
+
 import util.Input;
-import java.util.Random;
 
 public class GameOfWar {
     public static Card[] cards = CardsArray.findAll();
     public static Input input = new Input();
     public static int n = cards.length;
+
 
     public static void gamePrompt(){
             System.out.println("Would you like to play a game of War?" );
@@ -41,22 +40,26 @@ public class GameOfWar {
         Collections.shuffle(list);
     }
 
-    public static void splitDeck(){
-        Card[] a = Arrays.copyOfRange(cards, 0, (n + 1) / 2);
-        Card[] b = Arrays.copyOfRange(cards, (n + 1) / 2, n);
-            for(Card card: a){
-                System.out.println(card.getSuit() + " of " + card.getValue());
-            }
-        System.out.println();
-            for(Card card: b){
-                System.out.println(card.getSuit() + " of " + card.getValue());
-            }
-    }
 
     public static void main(String[] args) {
         shuffleCards();
         gamePrompt();
-        splitDeck();
+
+        Card[] a = Arrays.copyOfRange(cards, 0, (n + 1) / 2);
+        Card[] b = Arrays.copyOfRange(cards, (n + 1) / 2, n);
+
+        for(Card card: a){
+            System.out.println(card.getValue() + " of " + card.getSuit());
+            }
+
+        System.out.println();
+        for(Card card: b){
+            System.out.println(card.getValue() + " of " + card.getSuit());
+        }
+
+        System.out.println("Player 1: " + a);
+        System.out.println("Player 2: " + b);
+        System.out.println("Player " + " wins!");
 
     }
 }

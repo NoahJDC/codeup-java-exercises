@@ -17,6 +17,7 @@ public class Card {
         return suit;
     }
 
+
     public Card(String suit, String value, int points){
         this.suit = suit;
         this.value = value;
