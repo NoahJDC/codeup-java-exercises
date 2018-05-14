@@ -7,6 +7,7 @@ public class ShapesTest {
         System.out.println(myShape.getPerimeter());
         myShape = new Square(3);
         System.out.println(myShape.getArea());
+        System.out.println(myShape.getPerimeter());
 
 
     }
