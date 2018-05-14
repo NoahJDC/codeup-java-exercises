@@ -27,6 +27,11 @@ public class Student {
         }
         return sum / grades.size();
     }
+    public void showAllGrades() {
+        for(int grade : grades) {
+            System.out.print(grade + "\t");
+        }
+    }
 
     public String toString() {
         return name + " earned an average grade of " + getGradeAverage() + ".";

@@ -12,14 +12,10 @@ public class Input {
         return scanner.nextLine();
     }
     public boolean yesNo(){
-        String option = scanner.next();
-        if(option.equalsIgnoreCase("yes") || option.equalsIgnoreCase("y")){
-            return true;
-        }
-        return false;
+        String answer = scanner.next();
+        return "y".equalsIgnoreCase(answer) || "yes".equalsIgnoreCase(answer);
     }
     public int getInt(int min, int max){
-        System.out.println("Enter a number between " + min + "and " + max);
         String responseString = scanner.next();
         int response = Integer.parseInt(responseString);
         if(response<min || response>max){
@@ -29,11 +25,9 @@ public class Input {
         return response;
     }
     public int getInt(){
-        System.out.println("type a number");
         return scanner.nextInt();
     }
     public double getDouble(double min, double max){
-        System.out.println("Enter a number between " + min + "and " + max);
         String responseString = scanner.next();
         double response = Double.parseDouble(responseString);
         if(response<min || response>max){
@@ -42,7 +36,6 @@ public class Input {
         return response;
     }
     public double getDouble(){
-        System.out.println("make a decimal number");
         return scanner.nextDouble();
     }
 
